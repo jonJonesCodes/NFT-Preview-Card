@@ -31,6 +31,25 @@ h1 {
     overflow: hidden;
     border-radius: 6px;
     width: 300px;
+    position: relative;
+}
+
+.nft-image-overlay {
+    position: absolute;
+    top: 25px;
+    background-color: hsl(178, 100%, 50%, 50%);
+    width: 300px;
+    height: 300px;
+    z-index: 999;
+    opacity: 0;
+    border-radius: 6px;
+}
+
+.icon-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .auction-info {
@@ -73,7 +92,13 @@ h1 {
     color: white;
 }
 
-.flex-item {
-    border-style: solid;
-    border-color: red;
+.creator-name:hover,
+.nft-name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.nft-image-overlay:hover {
+    cursor: pointer;
+    opacity: 1;
 }
